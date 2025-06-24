@@ -1,0 +1,736 @@
+/* css/style.css */
+
+:root {
+    --color-primary: #1a3c6d; /* Azul oscuro */
+    --color-secondary: #007bff; /* Azul claro para acentos */
+    --color-accent: #e74c3c; /* Rojo/Naranja para botones o resaltados */
+    --color-text-light: #ffffff;
+    --color-text-dark: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 1300px; /* Ancho máximo del contenido */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+.header {
+    background-color: white;
+    color: black;
+}
+
+.top-bar {
+    padding: 10px 0;
+    font-size: 0.9em;
+    background-color: #022953;
+    color: white;
+    text-align: center;
+}
+
+.top-bar .container {
+    display: flex;
+    font-size: 0.9em;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+}
+
+.navbar {
+    padding: 2px ;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Estilo para logo centrado con fondo blanco y texto debajo --- */
+.logo-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.logo-centered img {
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.logo-centered .aniversario {
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-secondary);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-primary);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top: 3px solid var(--color-secondary);
+}
+
+.dropdown-content a {
+    color: var(--color-text-light);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-secondary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Hero Section --- */
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+.hero-image img {
+    max-width: 100%;
+    height: 8px;
+    border-radius: 10px; /* Si la imagen tiene bordes */
+}
+
+
+/* --- Why Choose Us Section --- */
+.why-choose-us {
+    padding: 60px 0;
+    background-color: #f8f8f8; /* Un fondo ligeramente diferente */
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: var(--color-primary);
+    line-height: normal;
+    word-spacing: normal;
+    text-align: left;
+}
+
+.reasons-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.reason-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 190px; /* Ancho mínimo para cada tarjeta */
+    max-width: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reason-item img {
+    width: 80px; /* Tamaño de los iconos */
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.reason-item p {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    font-weight: bold;
+}
+
+/* --- Complementary Services Section --- */
+.complementary-services {
+    padding: 60px 0;
+    background-color: white; /* Fondo azul oscuro */
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.complementary-services .container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan */
+    position: relative;
+    z-index: 1;
+}
+
+.services-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.services-content h2 {
+    color: black;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start; /* Alinea íconos y texto arriba */
+    margin-bottom: 28px;
+    gap: 35px;
+}
+
+.service-item img {
+    width: 50px; /* Tamaño de iconos */
+    height: 50px;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.service-text {
+    flex-grow: 1;
+}
+
+.service-item h3 {
+    margin: 0 ;
+    padding-bottom: 5px;
+    color: black;
+    font-size: 1.2em;
+}
+
+.service-item p {
+    font-size: 0.90em;
+    line-height: 1.5;
+    color:#666
+}
+
+.admission-process-button {
+    background-color: red; /* O un verde como en la imagen */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.admission-process-button:hover {
+    background-color: red; /* Un verde más oscuro si eliges verde */
+}
+
+.services-image {
+    flex: 1;
+    min-width: 400px; /* Ancho mínimo para la imagen */
+    text-align: center;
+}
+
+.services-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.complementary-services::before {
+    content: '';
+    position: absolute;
+    left: 40%;
+    transform: translateX(300px);
+    width: 435px; /* Ajusta el ancho según lo que se ve en la imagen */
+    height: 100%;
+    background-color: blue; /* Bloque azul oscuro */
+    z-index: 0; /* Asegura que esté detrás del contenido principal */
+}
+
+.complementary-services::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 20%; /* Desplazado a la izquierda del bloque oscuro */
+    width: 27%; /* Ancho del bloque celeste */
+    height: 9%;
+    background-color: red; /* Bloque celeste */
+    z-index: 0; /* Asegura que esté detrás del contenido principal */
+}
+
+/* Consideraciones de Responsividad para los bloques de color */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column; /* Apilar las columnas en pantallas más pequeñas */
+        align-items: center;
+        text-align: center; /* Centrar el contenido de texto */
+    }
+
+    .service-item img{
+        margin-bottom: 10px;
+    }
+
+    .services-content {
+        padding-right: 20px; /* Ajusta el padding para centrar */
+        padding-left: 20px;
+    }
+
+    /* Ocultar o reducir los bloques de color laterales en móvil si no se ven bien */
+    .complementary-services::before,
+    .complementary-services::after {
+        width: 100%; /* Ocupar todo el ancho */
+        height: 100px; /* O una altura fija para que no tapen todo */
+        position: relative; /* Ocultarlos si no encajan bien */
+        /* display: none; */ /* Opción para ocultarlos */
+    }
+
+    /* Si decides mantenerlos en móvil pero de forma diferente */
+    .complementary-services::before {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        height: 50%; /* Ocupa la mitad inferior */
+    }
+    .complementary-services::after {
+        top: auto;
+        bottom: 0; /* o top:0 si quieres que este arriba */
+        right: 0; /* se superpone con el before, deberias ajustar */
+        width: 100%;
+        height: 20%; /* Ocupa un porcentaje de la altura */
+        background-color: transparent; /* o menos opacidad */
+    }
+    /* La forma en que se ven los bloques en móvil depende mucho del diseño final.
+       A veces es mejor que la sección entera cambie de color de fondo. */
+}
+
+@media (max-width: 768px) {
+    .complementary-services::before,
+    .complementary-services::after {
+        /* En pantallas aún más pequeñas, es común que estos elementos sean decorativos y se puedan ocultar
+           o que la sección cambie su background-color general si no hay espacio para ellos. */
+        display: none;
+    }
+
+    .complementary-services {
+        background-color: var(--color-primary); /* La sección entera se vuelve azul oscuro */
+        color: var(--color-text-light); /* Y el texto blanco */
+    }
+    .services-content h2,
+    .service-item h3,
+    .service-item p {
+        color: var(--color-text-light); /* Asegurar que el texto sea blanco */
+    }
+
+}
+
+/* --- Areas & Psychopedagogy Section --- */
+.especialidades-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.titulo-especialidades {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-especialidades h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.titulo-especialidades p {
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.area-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch; /* Alineación uniforme */
+}
+
+.area-cards .flip-card {
+    width: calc(25% - 15px);
+    min-width: 250px;
+    height: 350px;
+}
+
+.flip-card {
+    background-color: transparent;
+    position: relative;
+    width: calc(25% - 15px);
+    min-width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Corregido nombre de clase */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Gira al hacer hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Gira al hacer clic */
+.flip-card.rotada .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Asegura altura fija para todas las caras */
+.flip-card-front, .flip-card-back, .flip-card-inner, .flip-card {
+    height: 350px;
+    max-height: 350px;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* Parte frontal */
+.flip-card-front {
+    background-color: #f0f4f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-front h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+/* Parte trasera */
+.flip-card-back {
+    background-color: var(--color-primary);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Evita que textos largos rompan el diseño */
+.flip-card-back p {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+/* Botón de rotación (si lo deseas ocultar, puedes comentar este bloque) */
+.flip-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffffcc;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- Student Preferences Section --- */
+.student-preferences {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.student-preferences h2 {
+    color: var(--color-primary);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.university-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.university-logos img {
+    height: 70px; /* Altura de los logos */
+    object-fit: contain;
+    max-width: 150px;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 50px 0;
+    position: relative; /* Para el botón flotante de WhatsApp */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-left img {
+    height: 70px; /* Ajusta el tamaño del logo del footer */
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-secondary); /* Raya debajo de los títulos */
+    padding-bottom: 10px;
+    display: inline-block; /* Para que la raya no ocupe todo el ancho */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-right i {
+    margin-right: 10px;
+    color: var(--color-secondary);
+}
+
+.social-media-footer {
+    margin-top: 20px;
+}
+
+.social-media-footer a {
+    color: var(--color-text-light);
+    font-size: 1.8em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media-footer a.facebook:hover { color: #3b5998; }
+.social-media-footer a.instagram:hover { color: #E1306C; }
+.social-media-footer a.youtube:hover { color: #FF0000; }
+
+/* --- WhatsApp Floating Button --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp-float i {
+    margin-top: 0; /* Ajuste para centrar el icono */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+/* --- Media Queries para Responsividad (ejemplos) --- */
+@media (max-width: 992px) {
+    .hero .container,
+    .complementary-services .container,
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image,
+    .services-content, .services-image,
+    .footer-left, .footer-middle, .footer-right {
+        text-align: center;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .reasons-grid, .area-cards, .university-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reason-item, .area-cards .card {
+        width: 80%; /* Más ancho en pantallas pequeñas */
+        max-width: 400px;
+    }
+
+    .footer-left img {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    .hero-content .levels span {
+        padding: 3px 10px;
+        font-size: 0.9em;
+    }
+    .cta-button, .admission-process-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel img.active {
+    opacity: 1;
+    position: relative;
+}
